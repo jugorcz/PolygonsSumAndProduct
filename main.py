@@ -1,7 +1,8 @@
-import PointInsidePolygonChecker as InsidePolygon
-from Plot import Scene
-from Plot import  LinesCollection
-from Plot import Plot
+from PolygonsSumAndProduct.Plot import Scene
+from PolygonsSumAndProduct.Plot import LinesCollection
+from PolygonsSumAndProduct.Plot import PointsCollection
+from PolygonsSumAndProduct.Plot import Plot
+import PolygonsSumAndProduct.PointInsidePolygonChecker as InsidePolygon
 
 
 def initializePolygons():
@@ -18,6 +19,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList1A = [A, B, C, D, E]
     polygon1A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList1A, color="blue")
     lines1 = LinesCollection(polygon1A, color='green')
 
     a = (5, 3)
@@ -30,10 +32,11 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList1B = [a,b,c,d,e]
+    pointsList1B = [a, b, c, d, e]
     polygon1B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList1B, color="orange")
     lines2 = LinesCollection(polygon1B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot = Plot([scene])
 
     # 2 common edge outside
@@ -49,6 +52,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList2A = [A, B, C, D, E]
     polygon2A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList2A, color="blue")
     lines1 = LinesCollection(polygon2A, color='green')
 
     a = (4, 1)
@@ -63,8 +67,9 @@ def initializePolygons():
     l5 = [e, a]
     pointsList2B = [a, b, c, d, e]
     polygon2B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList2B, color="orange")
     lines2 = LinesCollection(polygon2B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
     # 3 common edge inside
@@ -80,6 +85,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList3A = [A, B, C, D, E]
     polygon3A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList3A, color="blue")
     lines1 = LinesCollection(polygon3A, color='green')
 
     a = (4, 2)
@@ -94,8 +100,9 @@ def initializePolygons():
     l5 = [e, a]
     pointsList3B = [a, b, c, d, e]
     polygon3B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList3B, color="orange")
     lines2 = LinesCollection(polygon3B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
     # 4 common top
@@ -111,6 +118,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList4A = [A, B, C, D, E]
     polygon4A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList4A, color="blue")
     lines1 = LinesCollection(polygon4A, color='green')
 
     a = (6, 1)
@@ -125,8 +133,9 @@ def initializePolygons():
     l5 = [e, a]
     pointsList4B = [a, b, c, d, e]
     polygon4B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList4B, color="orange")
     lines2 = LinesCollection(polygon4B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
     # 5 crossing
@@ -142,6 +151,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList5A = [A, B, C, D, E]
     polygon5A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList5A, color="blue")
     lines1 = LinesCollection(polygon5A, color='green')
 
     a = (3, 2)
@@ -156,8 +166,9 @@ def initializePolygons():
     l5 = [e, a]
     pointsList5B = [a, b, c, d, e]
     polygon5B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList5B, color="orange")
     lines2 = LinesCollection(polygon5B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
     # 6 inside
@@ -173,6 +184,7 @@ def initializePolygons():
     l5 = [E, A]
     pointsList6A = [A, B, C, D, E]
     polygon6A = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(pointsList6A, color="blue")
     lines1 = LinesCollection(polygon6A, color='green')
 
     a = (2, 3)
@@ -187,8 +199,9 @@ def initializePolygons():
     l5 = [e, a]
     pointsList6B = [a, b, c, d, e]
     polygon6B = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(pointsList6B, color="orange")
     lines2 = LinesCollection(polygon6B, color='red')
-    scene = Scene([], [lines1, lines2])
+    scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
     plot.draw()
