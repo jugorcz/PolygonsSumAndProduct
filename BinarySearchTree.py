@@ -98,11 +98,11 @@ class BinarySearchTree:
         return self.root.__iter__()
 
     def put(self, key, val):
-        print("put " + str(key) + ":" + str(val))
-        duplicate = self.findDuplicate(self.root, key, val)
-        if duplicate:
-            print("Duplicate")
-            return
+        # print("put " + str(key) + ":" + str(val))
+        # duplicate = self.findDuplicate(self.root, key, val)
+        # if duplicate:
+        #    print("Duplicate")
+        #    return
 
         if self.root:
             self._put(key, val, self.root)  # _put is a helper function
@@ -159,7 +159,7 @@ class BinarySearchTree:
         return self.findDuplicate(self.root, key, value)
 
     def delete(self, key, value):
-        print("delete " + str(key))
+        # print("delete " + str(key) + ":" + str(value))
         if self.size > 1:
             nodeToRemove = self.getNode(self.root, key, value)
             if nodeToRemove:

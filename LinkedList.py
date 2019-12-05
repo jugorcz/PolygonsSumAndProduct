@@ -119,7 +119,7 @@ class LinkedList:
     def display(self):
         currentNode = self.start
         while currentNode is not None:
-            print(str(currentNode.key[0]) + " -> ", end="")
+            print(str(currentNode.key[0]) + "-" + str(currentNode.key[1]) + " -> ", end="")
             currentNode = currentNode.next
         print("None")
 

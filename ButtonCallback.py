@@ -1,10 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.collections as mcoll
-import matplotlib.colors as mcolors
-from matplotlib.widgets import Button
-import json as js
-
 
 class _Button_callback(object):
     def __init__(self, scenes):

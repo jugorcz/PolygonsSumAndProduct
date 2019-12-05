@@ -1,8 +1,8 @@
-from PolygonsSumAndProduct.Plot import Scene
-from PolygonsSumAndProduct.Plot import LinesCollection
-from PolygonsSumAndProduct.Plot import PointsCollection
-from PolygonsSumAndProduct.Plot import Plot
-import PolygonsSumAndProduct.PointInsidePolygonChecker as InsidePolygon
+from Plot import Scene
+from Plot import LinesCollection
+from Plot import PointsCollection
+from Plot import Plot
+import PointInsidePolygonChecker as InsidePolygon
 
 
 def initializePolygons():
@@ -143,7 +143,7 @@ def initializePolygons():
     B = (6, 1)
     C = (5, 5)
     D = (2, 6)
-    E = (2, 4)
+    E = (1, 4)
     l1 = [A, B]
     l2 = [B, C]
     l3 = [C, D]
@@ -156,7 +156,7 @@ def initializePolygons():
 
     a = (3, 2)
     b = (7, 3)
-    c = (9, 2)
+    c = (10, 2)
     d = (9, 5)
     e = (4, 4)
     l1 = [a, b]
