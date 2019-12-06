@@ -90,7 +90,7 @@ class LinkedList:
             currentNode = currentNode.next
 
     def delete(self, key):
-        print("delete " + str(key))
+        #print("delete " + str(key))
         if self.start:
             if self._delete(key):
                 self.size -= 1
@@ -146,8 +146,11 @@ class LinkedList:
         return None
 
     def swapPlaces(self, key1, key2):
-        print("swap " + str(key1[0]) + " with " + str(key2[0]))
+        #print("swap " + str(key1[0]) + " with " + str(key2[0]))
         # swap beginning
+        if self.get(key1) is None or self.get(key2) is Node:
+            return
+
         curr = self.start
         after = curr.next
         if (curr.key == key1 and after.key == key2) or (curr.key == key2 and after.key == key1):

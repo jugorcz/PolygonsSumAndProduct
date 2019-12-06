@@ -5,7 +5,7 @@ from Plot import Plot
 import PointInsidePolygonChecker as InsidePolygon
 
 
-def initializePolygons():
+def initialize_polygons():
     # 1 separable
     A = (1, 3)
     B = (4, 1)
@@ -17,10 +17,10 @@ def initializePolygons():
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList1A = [A, B, C, D, E]
-    polygon1A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList1A, color="blue")
-    lines1 = LinesCollection(polygon1A, color='green')
+    points_list1_a = [A, B, C, D, E]
+    polygon1_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list1_a, color="blue")
+    lines1 = LinesCollection(polygon1_a, color='green')
 
     a = (5, 3)
     b = (7, 1)
@@ -32,10 +32,10 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList1B = [a, b, c, d, e]
-    polygon1B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList1B, color="orange")
-    lines2 = LinesCollection(polygon1B, color='red')
+    points_list1_b = [a, b, c, d, e]
+    polygon1_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list1_b, color="orange")
+    lines2 = LinesCollection(polygon1_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot = Plot([scene])
 
@@ -50,10 +50,10 @@ def initializePolygons():
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList2A = [A, B, C, D, E]
-    polygon2A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList2A, color="blue")
-    lines1 = LinesCollection(polygon2A, color='green')
+    points_list2_a = [A, B, C, D, E]
+    polygon2_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list2_a, color="blue")
+    lines1 = LinesCollection(polygon2_a, color='green')
 
     a = (4, 1)
     b = (9, 1)
@@ -65,10 +65,10 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList2B = [a, b, c, d, e]
-    polygon2B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList2B, color="orange")
-    lines2 = LinesCollection(polygon2B, color='red')
+    points_list2_b = [a, b, c, d, e]
+    polygon2_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list2_b, color="orange")
+    lines2 = LinesCollection(polygon2_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
@@ -83,25 +83,25 @@ def initializePolygons():
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList3A = [A, B, C, D, E]
-    polygon3A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList3A, color="blue")
-    lines1 = LinesCollection(polygon3A, color='green')
+    points_list3_a = [A, B, C, D, E]
+    polygon3_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list3_a, color="blue")
+    lines1 = LinesCollection(polygon3_a, color='green')
 
     a = (4, 2)
     b = (6, 2)
     c = (7, 10)
     d = (5, 6)
-    e = (4, 4)
+    e = (3, 4)
     l1 = [a, b]
     l2 = [b, c]
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList3B = [a, b, c, d, e]
-    polygon3B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList3B, color="orange")
-    lines2 = LinesCollection(polygon3B, color='red')
+    points_list3_b = [a, b, c, d, e]
+    polygon3_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list3_b, color="orange")
+    lines2 = LinesCollection(polygon3_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
@@ -110,16 +110,16 @@ def initializePolygons():
     B = (4, 1)
     C = (5, 4)
     D = (3, 6)
-    E = (1, 5)
+    E = (2, 5)
     l1 = [A, B]
     l2 = [B, C]
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList4A = [A, B, C, D, E]
-    polygon4A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList4A, color="blue")
-    lines1 = LinesCollection(polygon4A, color='green')
+    points_list4_a = [A, B, C, D, E]
+    polygon4_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list4_a, color="blue")
+    lines1 = LinesCollection(polygon4_a, color='green')
 
     a = (6, 1)
     b = (8, 3)
@@ -131,10 +131,10 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList4B = [a, b, c, d, e]
-    polygon4B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList4B, color="orange")
-    lines2 = LinesCollection(polygon4B, color='red')
+    points_list4_b = [a, b, c, d, e]
+    polygon4_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list4_b, color="orange")
+    lines2 = LinesCollection(polygon4_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
@@ -143,16 +143,16 @@ def initializePolygons():
     B = (6, 1)
     C = (5, 5)
     D = (2, 6)
-    E = (1, 4)
+    E = (3, 4)
     l1 = [A, B]
     l2 = [B, C]
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList5A = [A, B, C, D, E]
-    polygon5A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList5A, color="blue")
-    lines1 = LinesCollection(polygon5A, color='green')
+    points_list5_a = [A, B, C, D, E]
+    polygon5_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list5_a, color="blue")
+    lines1 = LinesCollection(polygon5_a, color='green')
 
     a = (3, 2)
     b = (7, 3)
@@ -164,10 +164,10 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList5B = [a, b, c, d, e]
-    polygon5B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList5B, color="orange")
-    lines2 = LinesCollection(polygon5B, color='red')
+    points_list5_b = [a, b, c, d, e]
+    polygon5_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list5_b, color="orange")
+    lines2 = LinesCollection(polygon5_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
@@ -182,10 +182,10 @@ def initializePolygons():
     l3 = [C, D]
     l4 = [D, E]
     l5 = [E, A]
-    pointsList6A = [A, B, C, D, E]
-    polygon6A = [l1, l2, l3, l3, l4, l5]
-    points1 = PointsCollection(pointsList6A, color="blue")
-    lines1 = LinesCollection(polygon6A, color='green')
+    points_list6_a = [A, B, C, D, E]
+    polygon6_a = [l1, l2, l3, l3, l4, l5]
+    points1 = PointsCollection(points_list6_a, color="blue")
+    lines1 = LinesCollection(polygon6_a, color='green')
 
     a = (2, 3)
     b = (5, 3)
@@ -197,28 +197,37 @@ def initializePolygons():
     l3 = [c, d]
     l4 = [d, e]
     l5 = [e, a]
-    pointsList6B = [a, b, c, d, e]
-    polygon6B = [l1, l2, l3, l3, l4, l5]
-    points2 = PointsCollection(pointsList6B, color="orange")
-    lines2 = LinesCollection(polygon6B, color='red')
+    points_list6_b = [a, b, c, d, e]
+    polygon6_b = [l1, l2, l3, l3, l4, l5]
+    points2 = PointsCollection(points_list6_b, color="orange")
+    lines2 = LinesCollection(polygon6_b, color='red')
     scene = Scene([points1, points2], [lines1, lines2])
     plot.add_scene(scene)
 
-    plot.draw()
+    #plot.draw()
 
-    case1 = (pointsList1A, pointsList1B)
-    case2 = (pointsList2A, pointsList2B)
-    case3 = (pointsList3A, pointsList3B)
-    case4 = (pointsList4A, pointsList4B)
-    case5 = (pointsList5A, pointsList5B)
-    case6 = (pointsList6A, pointsList6B)
-    return case1, case2, case3, case4, case5, case6
+    case1_points = (points_list1_a, points_list1_b)
+    case2_points = (points_list2_a, points_list2_b)
+    case3_points = (points_list3_a, points_list3_b)
+    case4_points = (points_list4_a, points_list4_b)
+    case5_points = (points_list5_a, points_list5_b)
+    case6_points = (points_list6_a, points_list6_b)
+    case_list_points = [case1_points, case2_points, case3_points, case4_points, case5_points, case6_points]
+
+    case1_polygon = (polygon1_a, polygon1_b)
+    case2_polygon = (polygon2_a, polygon2_b)
+    case3_polygon = (polygon3_a, polygon3_b)
+    case4_polygon = (polygon4_a, polygon4_b)
+    case5_polygon = (polygon5_a, polygon5_b)
+    case6_polygon = (polygon6_a, polygon6_b)
+    case_list_polygons = [case1_polygon, case2_polygon, case3_polygon, case4_polygon, case5_polygon, case6_polygon]
+
+    return case_list_points, case_list_polygons
 
 
 def main():
-    print("Hello world")
-    InsidePolygon.check()
-    initializePolygons()
+    case_list_points, case_list_polygons = initialize_polygons()
+    InsidePolygon.check(case_list_points, case_list_polygons)
 
 
 if __name__ == '__main__':
