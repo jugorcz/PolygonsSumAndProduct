@@ -31,6 +31,14 @@ class LinkedList:
     # node: line -> (x,y)
     # dictionary: line -> function(a,b)
     def compareNodes(self, leftNode, rightNode):
+        function1 = self.dictionary[leftNode.key]
+        function2 = self.dictionary[rightNode.key]
+        if function1 == function2:
+            if leftNode.key[1][1] > rightNode.key[1][1]:
+                return 1
+            else:
+                return -1
+
         leftX = leftNode.value[0]
         rightX = rightNode.value[0]
         if leftX != rightX:
@@ -49,7 +57,9 @@ class LinkedList:
         elif rightY > leftY:
             return -1
         else:
-            return 0
+            function = self.dictionary[leftNode.key]
+            leftNode.value = self.calculateNewValue(leftNode.value[0]+0.5, function)
+            return self.compareNodes(leftNode, rightNode)
 
     def _put(self, key, value):
         # new node goes to the beginning of list
@@ -148,8 +158,21 @@ class LinkedList:
     def swapPlaces(self, key1, key2):
         #print("swap " + str(key1[0]) + " with " + str(key2[0]))
         # swap beginning
-        if self.get(key1) is None or self.get(key2) is Node:
+        if self.get(key1) is None or self.get(key2) is None:
             return
+
+        node1 = self._get(key1)
+        node2 = self._get(key2)
+        if self.compareNodes(node1, node2) == 0:
+            function = self.dictionary[node1.key]
+            node1.value = self.calculateNewValue(node1.value[0]+1, function)
+
+        if self.compareNodes(node1, node2) == 1:
+            if node1.next == node2:
+                return
+        else:
+            if node2.next == node1:
+                return
 
         curr = self.start
         after = curr.next

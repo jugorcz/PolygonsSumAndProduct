@@ -204,8 +204,7 @@ def is_end_point_checked(dictionary, point):
     return None
 
 
-def check_if_intersects(lines_list):
-    height = 10
+def check_if_intersects(lines_list, max_y):
     lines_dictionary, q = read_lines_list(lines_list)
 
     start_points_used_dictionary = dict()
@@ -269,7 +268,7 @@ def check_if_intersects(lines_list):
         line2 = intersections_dictionary[intersection][1]
         #print(str(point) + " is intersection of " + str(line1) + " and " + str(line2))
 
-        new_line = [(point[0], height - 1), (point[0], 1)]
+        new_line = [(point[0], max_y), (point[0], 1)]
         new_lines_collection = LinesCollection([new_line], color="red")
         points_collection = PointsCollection([point], color="green", marker="^")
         new_scene = Scene([points_collection], [lines_collection, new_lines_collection])
