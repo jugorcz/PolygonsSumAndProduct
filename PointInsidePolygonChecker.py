@@ -171,6 +171,10 @@ def check(case_points, case_polygons):
     sum_points += figure_intersections
     product_points += figure_intersections
 
+    if len(product_points) == 0:
+        print("Figures are separated")
+        return
+
     sum_points_collection = PointsCollection(sum_points, color="blue")
     product_points_collection = PointsCollection(product_points, color="red")
 
@@ -183,7 +187,7 @@ def check(case_points, case_polygons):
         if line in sum_lines:
             sum_lines.remove(line)
 
-    sum_lines_collection = LinesCollection(sum_lines)
+    sum_lines_collection = LinesCollection(sum_lines, color = "green")
 
     scene1 = Scene([sum_points_collection], [sum_lines_collection])
     scene2 = Scene([product_points_collection], [product_lines_collection])

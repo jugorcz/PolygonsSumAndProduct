@@ -274,7 +274,7 @@ def check_if_intersects(lines_list, max_y):
         new_scene = Scene([points_collection], [lines_collection, new_lines_collection])
         my_plot.add_scene(new_scene)
 
-    #my_plot.draw()
+    my_plot.draw()
     return intersections_dictionary
 
 

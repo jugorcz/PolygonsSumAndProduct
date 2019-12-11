@@ -3,6 +3,7 @@ from Plot import LinesCollection
 from Plot import PointsCollection
 from Plot import Plot
 import PointInsidePolygonChecker as InsidePolygon
+import sys
 
 
 def initialize_polygons(case):
@@ -195,7 +196,7 @@ def initialize_polygons(case):
 
 
 def main():
-    case = 5
+    case = int(sys.argv[1])
     case_points, case_polygons = initialize_polygons(case)
     InsidePolygon.check(case_points, case_polygons)
 
